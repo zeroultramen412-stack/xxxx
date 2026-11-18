@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALLO SANDRIAA💖</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 35px 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 420px;
+            width: 100%;
+            transition: all 0.4s ease;
+        }
+
+        /* Lock Screen Styling */
+        #lock-screen h2 {
+            color: #d63384;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        #lock-screen p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .heart-barcode {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px auto;
+            background: #fff;
+            border: 3px dashed #ff4d6d;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .heart-barcode:hover {
+            background: #fff0f3;
+            transform: scale(1.05);
+        }
+
+        .heart-icon {
+            font-size: 50px;
+            color: #ff4d6d;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+
+        .btn {
+            background: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #e03e5c;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #ff4d6d;
+            border: 2px solid #ff4d6d;
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            background: #fff0f3;
+        }
+
+        /* Greeting & Video Screen Styling */
+        #greeting-screen, #video-screen {
+            display: none;
+        }
+
+        #greeting-screen h1, #video-screen h2 {
+            color: #ff4d6d;
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        #greeting-screen h1 {
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-5px); }
+        }
+
+        #greeting-screen p, #video-screen p {
+            color: #444;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .cake {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        /* Styling Pemutar Video */
+        video {
+            width: 100%;
+            max-height: 350px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            background: #000;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- SLIDE 1: Halaman Kunci / Scan Barcode -->
+        <div id="lock-screen">
+            <h2>Akses Terbatas 🔒</h2>
+            <p>Scan Barcode Berbentuk Love di bawah ini untuk membuka ucapan spesial untuk sandria!</p>
+            
+            <div class="heart-barcode" id="heartBtn">
+                <div class="heart-icon">❤️</div>
+                <span style="font-size: 11px; color: #888; margin-top: 5px;">Click to Scan</span>
+            </div>
+
+            <button class="btn" id="scanBtn">Scan Barcode</button>
+        </div>
+
+        <!-- SLIDE 2: hallo sayang ku cintaa kuu -->
+        <div id="greeting-screen">
+            <div class="cake">🎂</div>
+            <h1>HALLO SAYANG! 🎉</h1>
+            <p> Hallo sayanggg kuuu,akuuu mauuu ngomongg,jangannn menyerahhh yaa sayanggg kuuu,tetep semangat yaaa sayangg,kalooo adaaa apaa apaaaa bilang oo akuu jangann nutup nutupin,semangatt yaa pkl yaa sayang kuu💖</p>
+            
+            <div>
+                <button class="btn" id="toVideoBtn">Lihat Video Spesial 🎥</button>
+                <button class="btn btn-secondary" onclick="location.reload()">Kunci</button>
+            </div>
+        </div>
+
+<!-- SLIDE 3: Halaman Cuplikan Video -->
+        <div id="video-screen" style="display: none;">
+            <h2>Special Memories 💖</h2>
+            <p>Ada sedikit cuplikan video spesial buat kamu, ditonton ya!</p>
+            
+            <!-- Pemutar Video Google Drive -->
+            <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; margin-bottom: 20px;">
+                <video width="640" controls>
+                   <source src="cihuy.webm" type="video/webm" />
+                  autoplay
+                  muted
+                  controls
+                  loop
+                  playsinline
+                  ></video>
+            </div>
+
+            <div>
+                <button class="btn btn-secondary" id="backToGreetingBtn">⬅️ Kembali ke Ucapan</button>
+            </div>
+        </div>
+
+  <script>
+        const lockScreen = document.getElementById('lock-screen');
+        const greetingScreen = document.getElementById('greeting-screen');
+        const videoScreen = document.getElementById('video-screen');
+        
+        const heartBtn = document.getElementById('heartBtn');
+        const scanBtn = document.getElementById('scanBtn');
+        const toVideoBtn = document.getElementById('toVideoBtn');
+        const backToGreetingBtn = document.getElementById('backToGreetingBtn');
+
+        function unlockSystem() {
+            lockScreen.style.display = 'none';
+            greetingScreen.style.display = 'block';
+        }
+
+        function showVideo() {
+            greetingScreen.style.display = 'none';
+            videoScreen.style.display = 'block';
+        }
+
+        function backToGreeting() {
+            videoScreen.style.display = 'none';
+            greetingScreen.style.display = 'block';
+        }
+
+        heartBtn.addEventListener('click', unlockSystem);
+        scanBtn.addEventListener('click', unlockSystem);
+        toVideoBtn.addEventListener('click', showVideo);
+        backToGreetingBtn.addEventListener('click', backToGreeting);
+    </script>
+</body>
+</html>
